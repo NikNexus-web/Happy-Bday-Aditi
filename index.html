@@ -1,208 +1,406 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>For Aditi ❤️</title>
+```
+<title>For Aditi ❤️ | Birthday Surprise</title>
 
-    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+```
+
 </head>
 
 <body>
 
-    <!-- BACKGROUND MUSIC -->
-    <audio id="bgMusic" loop preload="auto">
-        <source src="./eyes/Birthday.mp3" type="audio/mpeg">
-    </audio>
+```
+<!-- ================================= -->
+<!-- 3D DIGITAL BIRTHDAY COUNTDOWN -->
+<!-- ================================= -->
 
-    <!-- MUSIC BUTTON -->
-    <button id="musicBtn" class="music-btn">
-        ♫ MUSIC OFF
-    </button>
+<div class="countdown-screen" id="countdownScreen">
 
+    <div class="countdown-background">
+        <div class="countdown-glow glow-one"></div>
+        <div class="countdown-glow glow-two"></div>
+        <div class="countdown-glow glow-three"></div>
+    </div>
 
-    <!-- INTRO SECTION -->
-    <section class="intro" id="intro">
+    <div class="countdown-stars" id="countdownStars"></div>
 
-        <div class="intro-content">
+    <div class="countdown-card">
 
-            <p class="small-heading">A LITTLE SOMETHING FOR YOU</p>
+        <div class="countdown-tag">
+            ✦ A SPECIAL MOMENT IS WAITING ✦
+        </div>
 
-            <h1>Those Beautiful Eyes...</h1>
+        <div class="countdown-heart">♡</div>
 
-            <div class="eye-frame">
-                <img src="./eyes/eyes2.png"
-                     alt="Aditi's Beautiful Eyes"
-                     class="eye-photo">
+        <p class="countdown-small">
+            SOMEONE SPECIAL DESERVES SOMETHING SPECIAL
+        </p>
+
+        <h1 class="countdown-heading">
+            Hey, <span>Aditi</span>!
+        </h1>
+
+        <p class="countdown-description">
+            The countdown to your beautiful day has begun.
+        </p>
+
+        <div class="countdown-divider">
+            <span></span>
+            ✦
+            <span></span>
+        </div>
+
+        <p class="timer-heading">
+            YOUR BIRTHDAY BEGINS IN
+        </p>
+
+        <!-- DIGITAL TIMER -->
+
+        <div class="digital-countdown">
+
+            <div class="digital-box">
+
+                <div class="digital-number" id="days">
+                    00
+                </div>
+
+                <div class="digital-label">
+                    DAYS
+                </div>
+
             </div>
 
-            <p class="intro-text">
-                Some eyes tell stories that words never can.
-            </p>
+            <div class="digital-separator">:</div>
 
-            <button id="enterButton" class="enter-btn">
-                ENTER YOUR WORLD ✨
-            </button>
+            <div class="digital-box">
+
+                <div class="digital-number" id="hours">
+                    00
+                </div>
+
+                <div class="digital-label">
+                    HOURS
+                </div>
+
+            </div>
+
+            <div class="digital-separator">:</div>
+
+            <div class="digital-box">
+
+                <div class="digital-number" id="minutes">
+                    00
+                </div>
+
+                <div class="digital-label">
+                    MINUTES
+                </div>
+
+            </div>
+
+            <div class="digital-separator">:</div>
+
+            <div class="digital-box">
+
+                <div class="digital-number" id="seconds">
+                    00
+                </div>
+
+                <div class="digital-label">
+                    SECONDS
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="countdown-date">
+            ♡ 13 NOVEMBER 2026 ♡
+        </div>
+
+        <p class="countdown-bottom">
+            Every second brings us closer to your special day.
+        </p>
+
+        <div class="countdown-footer">
+            MADE WITH LOVE BY NIKUNJ ❤️
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================================= -->
+<!-- ORIGINAL BIRTHDAY WEBSITE -->
+<!-- ================================= -->
+
+
+<!-- BACKGROUND MUSIC -->
+
+<audio id="bgMusic" loop preload="auto">
+    <source src="./eyes/Birthday.mp3" type="audio/mpeg">
+</audio>
+
+
+<!-- MUSIC BUTTON -->
+
+<button id="musicBtn" class="music-btn">
+    ♫ MUSIC OFF
+</button>
+
+
+<!-- INTRO SECTION -->
+
+<section class="intro" id="intro">
+
+    <div class="intro-content">
+
+        <p class="small-heading">
+            A LITTLE SOMETHING FOR YOU
+        </p>
+
+        <h1>
+            Those Beautiful Eyes...
+        </h1>
+
+        <div class="eye-frame">
+
+            <img src="./eyes/eyes2.png"
+                 alt="Aditi's Beautiful Eyes"
+                 class="eye-photo">
+
+        </div>
+
+        <p class="intro-text">
+            Some eyes tell stories that words never can.
+        </p>
+
+        <button id="enterButton" class="enter-btn">
+            ENTER YOUR WORLD ✨
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- MAIN WEBSITE -->
+
+<main id="mainContent">
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <p class="small-heading">
+            A SPECIAL DAY FOR SOMEONE SPECIAL
+        </p>
+
+        <h1>
+            Happy Birthday,<br>
+            <span>Aditi ❤️</span>
+        </h1>
+
+        <p class="hero-text">
+            A beautiful soul deserves a beautiful celebration.
+        </p>
+
+        <a href="#gallery" class="explore-btn">
+            EXPLORE YOUR SURPRISE ↓
+        </a>
+
+    </section>
+
+
+    <!-- GALLERY -->
+
+    <section class="gallery-section" id="gallery">
+
+        <p class="small-heading">
+            A COLLECTION OF MEMORIES
+        </p>
+
+        <h2>
+            Little Moments, <i>Big Memories.</i>
+        </h2>
+
+        <div class="gallery">
+
+            <div class="photo-card">
+
+                <img src="eyes/aditi.jpeg" alt="Aditi">
+
+                <p>Beautiful moments ✨</p>
+
+            </div>
+
+
+            <div class="photo-card">
+
+                <img src="./eyes/aditi2.jpeg" alt="Aditi">
+
+                <p>That lovely smile ❤️</p>
+
+            </div>
+
+
+            <div class="photo-card">
+
+                <img src="./eyes/aditi3.jpeg" alt="Aditi">
+
+                <p>Forever special 🌸</p>
+
+            </div>
+
+
+            <div class="photo-card">
+
+                <img src="./eyes/aditi4.jpeg" alt="Aditi">
+
+                <p>Simply unforgettable</p>
+
+            </div>
 
         </div>
 
     </section>
 
 
-    <!-- MAIN WEBSITE -->
-    <main id="mainContent">
+    <!-- LETTER -->
 
-        <!-- HERO -->
-        <section class="hero">
+    <section class="letter-section">
 
-            <p class="small-heading">A SPECIAL DAY FOR SOMEONE SPECIAL</p>
+        <p class="small-heading">
+            A LITTLE MESSAGE
+        </p>
 
-            <h1>Happy Birthday,<br>
-                <span>Aditi ❤️</span>
-            </h1>
+        <h2>
+            Dear <i>Aditi,</i>
+        </h2>
 
-            <p class="hero-text">
-                A beautiful soul deserves a beautiful celebration.
+        <div class="letter-box">
+
+            <p>
+                Life becomes more beautiful when we have
+                people like you around us.
             </p>
 
-            <a href="#gallery" class="explore-btn">
-                EXPLORE YOUR SURPRISE ↓
-            </a>
+            <p>
+                Keep smiling, keep shining and never stop
+                being the amazing person you are.
+            </p>
 
-        </section>
+            <p>
+                You deserve all the happiness, love and
+                beautiful moments in this world.
+            </p>
 
+            <h3>
+                Lots of Love ❤️
+            </h3>
 
-        <!-- GALLERY -->
-        <section class="gallery-section" id="gallery">
+        </div>
 
-            <p class="small-heading">A COLLECTION OF MEMORIES</p>
-
-            <h2>Little Moments, <i>Big Memories.</i></h2>
-
-            <div class="gallery">
-
-                <div class="photo-card">
-                    <img src="eyes/aditi.jpeg" alt="Aditi">
-                    <p>Beautiful moments ✨</p>
-                </div>
-
-                <div class="photo-card">
-                    <img src="./eyes/aditi2.jpeg" alt="Aditi">
-                    <p>That lovely smile ❤️</p>
-                </div>
-
-                <div class="photo-card">
-                    <img src="./eyes/aditi3.jpeg" alt="Aditi">
-                    <p>Forever special 🌸</p>
-                </div>
-
-                <div class="photo-card">
-                    <img src="./eyes/aditi4.jpeg" alt="Aditi">
-                    <p>Simply unforgettable</p>
-                </div>
-
-            </div>
-
-        </section>
+    </section>
 
 
-        <!-- LETTER -->
-        <section class="letter-section">
+    <!-- VIDEO SECTION -->
 
-            <p class="small-heading">A LITTLE MESSAGE</p>
+    <section class="video-section">
 
-            <h2>Dear <i>Aditi,</i></h2>
+        <p class="small-heading">
+            A MEMORY TO REMEMBER
+        </p>
 
-            <div class="letter-box">
+        <h2>
+            A Little <i>Surprise</i> For You ❤️
+        </h2>
 
-                <p>
-                    Life becomes more beautiful when we have
-                    people like you around us.
-                </p>
+        <div class="video-container">
 
-                <p>
-                    Keep smiling, keep shining and never stop
-                    being the amazing person you are.
-                </p>
+            <video controls playsinline preload="metadata">
 
-                <p>
-                    You deserve all the happiness, love and
-                    beautiful moments in this world.
-                </p>
+                <source
+                    src="https://res.cloudinary.com/kgdqdy53/video/upload/v1793293606/WhatsApp_Video_2026-10-29_at_9.06.45_PM.mp4"
+                    type="video/mp4">
 
-                <h3>Lots of Love ❤️</h3>
+                Your browser does not support video playback.
 
-            </div>
+            </video>
 
-        </section>
+        </div>
 
+        <p class="video-caption">
+            Every moment with you is worth remembering. ✨
+        </p>
 
-        <!-- FINAL SURPRISE -->
-        <section class="surprise-section">
-
-            <p class="small-heading">ONE LAST THING</p>
-
-            <h2>A Little <i>Surprise</i> For You!</h2>
-
-            <button id="surpriseButton" class="surprise-btn">
-                OPEN YOUR SURPRISE 🎁
-            </button>
-
-            <div id="surpriseMessage" class="surprise-message">
-
-                <h2>You Are Truly Special! ❤️</h2>
-
-                <p>
-                    Never forget how precious you are.
-                    Keep smiling, Aditi!
-                </p>
-
-                <h1>HAPPY BIRTHDAY! 🎂</h1>
-
-            </div>
-
-        </section>
+    </section>
 
 
-        <!-- FOOTER -->
-        <footer>
-            Made with ❤️ for Aditi From Nikunj
-            <p>Forever Special ✨</p>
-        </footer>
+    <!-- FINAL SURPRISE -->
 
-    </main>
+    <section class="surprise-section">
+
+        <p class="small-heading">
+            ONE LAST THING
+        </p>
+
+        <h2>
+            A Little <i>Surprise</i> For You!
+        </h2>
+
+        <button id="surpriseButton" class="surprise-btn">
+            OPEN YOUR SURPRISE 🎁
+        </button>
+
+        <div id="surpriseMessage" class="surprise-message">
+
+            <h2>
+                You Are Truly Special! ❤️
+            </h2>
+
+            <p>
+                Never forget how precious you are.
+                Keep smiling, Aditi!
+            </p>
+
+            <h1>
+                HAPPY BIRTHDAY! 🎂
+            </h1>
+
+        </div>
+
+    </section>
 
 
-    <script src="script.js"></script>
+    <!-- FOOTER -->
 
-    <!-- SPECIAL VIDEO SECTION -->
+    <footer>
 
-<section class="video-section">
+        Made with ❤️ for Aditi From Nikunj
 
-    <p class="small-heading">A MEMORY TO REMEMBER</p>
+        <p>
+            Forever Special ✨
+        </p>
 
-    <h2>A Little <i>Surprise</i> For You ❤️</h2>
+    </footer>
 
-    <div class="video-container">
+</main>
 
-        <video controls playsinline preload="metadata">
-            <source
-                src="https://res.cloudinary.com/kgdqdy53/video/upload/v1793293606/WhatsApp_Video_2026-10-29_at_9.06.45_PM.mp4"
-                type="video/mp4">
-            
-            Your browser does not support video playback.
-        </video>
 
-    </div>
-
-    <p class="video-caption">
-        Every moment with you is worth remembering. ✨
-    </p>
-
-</section>
+<script src="script.js"></script>
+```
 
 </body>
 </html>
