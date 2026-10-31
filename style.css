@@ -41,10 +41,12 @@ body {
     align-items: center;
     padding: 20px;
     overflow: hidden;
+
     background:
         radial-gradient(circle at 20% 20%, #442033 0%, transparent 40%),
         radial-gradient(circle at 80% 80%, #30203b 0%, transparent 40%),
         #100b12;
+
     transition: opacity 1.2s ease, visibility 1.2s ease;
 }
 
@@ -61,15 +63,32 @@ body {
     max-width: 850px;
     padding: 45px 25px;
     text-align: center;
+
     border: 1px solid rgba(233, 168, 183, 0.3);
     border-radius: 25px;
+
     background: rgba(255, 255, 255, 0.04);
+
     box-shadow:
         0 20px 60px rgba(0, 0, 0, 0.5),
         inset 0 0 30px rgba(233, 168, 183, 0.05);
+
     backdrop-filter: blur(15px);
-    transform-style: preserve-3d;
+
     animation: countdownFloat 5s ease-in-out infinite;
+}
+
+.countdown-tag {
+    color: var(--gold);
+    letter-spacing: 3px;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.countdown-heart {
+    font-size: 55px;
+    color: var(--pink);
+    margin-bottom: 10px;
 }
 
 .countdown-card h1 {
@@ -77,14 +96,28 @@ body {
     font-family: 'Cormorant Garamond', serif;
     font-size: clamp(30px, 6vw, 55px);
     margin-bottom: 12px;
-    letter-spacing: 2px;
 }
 
 .countdown-card p {
     color: var(--pink);
     font-size: 14px;
-    letter-spacing: 3px;
-    margin-bottom: 35px;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.countdown-divider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    color: var(--gold);
+    margin: 25px 0;
+}
+
+.countdown-divider span {
+    width: 80px;
+    height: 1px;
+    background: var(--gold);
 }
 
 .digital-countdown {
@@ -99,45 +132,53 @@ body {
     width: 130px;
     min-height: 140px;
     padding: 20px 10px;
+
     border-radius: 15px;
     border: 1px solid rgba(233, 201, 155, 0.4);
+
     background: linear-gradient(145deg, #38202f, #160f19);
-    box-shadow:
-        8px 8px 18px rgba(0, 0, 0, 0.5),
-        -4px -4px 12px rgba(255, 255, 255, 0.03);
-    transform: perspective(600px) rotateX(5deg);
+
+    box-shadow: 8px 8px 18px rgba(0, 0, 0, 0.5);
+
     transition: transform 0.3s ease;
 }
 
 .digital-box:hover {
-    transform: perspective(600px) rotateX(0deg) translateY(-8px);
+    transform: translateY(-8px);
 }
 
 .digital-number {
-    display: block;
     color: var(--gold);
     font-size: 45px;
     font-weight: 700;
-    font-family: 'DM Sans', sans-serif;
-    text-shadow:
-        0 2px 0 #a47a57,
-        0 4px 0 #76543e,
-        0 8px 15px rgba(0, 0, 0, 0.8);
+
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
 }
 
 .digital-label {
-    display: block;
     margin-top: 12px;
     color: var(--pink);
     font-size: 12px;
     letter-spacing: 2px;
-    text-transform: uppercase;
 }
 
 .digital-separator {
     color: var(--gold);
     font-size: 35px;
-    font-weight: bold;
+}
+
+.countdown-date {
+    color: var(--gold);
+    letter-spacing: 3px;
+    margin-top: 30px;
+    font-size: 13px;
+}
+
+.countdown-footer {
+    color: var(--pink);
+    font-size: 11px;
+    letter-spacing: 3px;
+    margin-top: 30px;
 }
 
 @keyframes countdownFloat {
@@ -151,7 +192,7 @@ body {
 }
 
 
-/* Countdown Stars */
+/* COUNTDOWN STARS */
 
 .countdown-stars {
     position: absolute;
@@ -192,12 +233,15 @@ body {
     top: 20px;
     right: 20px;
     z-index: 99999;
+
     padding: 12px 20px;
+
     border: 1px solid var(--gold);
     border-radius: 30px;
+
     background: rgba(16, 11, 18, 0.85);
     color: var(--gold);
-    font-size: 13px;
+
     cursor: pointer;
     transition: 0.3s ease;
 }
@@ -205,7 +249,6 @@ body {
 .music-btn:hover {
     background: var(--gold);
     color: var(--dark);
-    transform: scale(1.05);
 }
 
 
@@ -213,15 +256,17 @@ body {
    4. INTRO SCREEN
 ===================================== */
 
-.intro,
-.intro-screen {
+.intro {
     min-height: 100vh;
     width: 100%;
+
     display: flex;
     justify-content: center;
     align-items: center;
+
     padding: 30px 20px;
     text-align: center;
+
     background:
         radial-gradient(circle at center, #291725, #100b12 70%);
 }
@@ -241,16 +286,16 @@ body {
 }
 
 .eye-frame {
-    position: relative;
     width: 260px;
     height: 260px;
-    margin: 0 auto 30px;
+
+    margin: 30px auto;
+
     padding: 8px;
     border: 2px solid var(--gold);
     border-radius: 50%;
-    box-shadow:
-        0 0 20px rgba(233, 168, 183, 0.3),
-        0 0 50px rgba(233, 168, 183, 0.15);
+
+    box-shadow: 0 0 40px rgba(233, 168, 183, 0.2);
 }
 
 .eye-photo {
@@ -260,10 +305,16 @@ body {
     border-radius: 50%;
 }
 
+.intro h1 {
+    color: var(--gold);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(35px, 6vw, 55px);
+}
+
 .intro-text {
     color: var(--pink);
     font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(30px, 5vw, 45px);
+    font-size: clamp(25px, 5vw, 40px);
     margin-bottom: 30px;
 }
 
@@ -271,12 +322,17 @@ body {
 .explore-btn {
     display: inline-block;
     padding: 14px 35px;
+
     border: 1px solid var(--gold);
     border-radius: 30px;
+
     background: transparent;
     color: var(--gold);
+
+    text-decoration: none;
     font-size: 13px;
     letter-spacing: 2px;
+
     cursor: pointer;
     transition: 0.3s ease;
 }
@@ -293,14 +349,12 @@ body {
    5. MAIN WEBSITE
 ===================================== */
 
-#mainContent,
-.main-world {
+#mainContent {
     display: none;
     width: 100%;
 }
 
-#mainContent.show,
-.main-world.world-visible {
+#mainContent.show {
     display: block;
 }
 
@@ -309,21 +363,22 @@ body {
    6. HERO SECTION
 ===================================== */
 
-.hero,
-.welcome-section {
+.hero {
     min-height: 90vh;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     text-align: center;
     padding: 60px 20px;
+
     background:
         radial-gradient(circle at center, #301b2a, #100b12 75%);
 }
 
-.hero h1,
-.welcome-section h1 {
+.hero h1 {
     color: var(--gold);
     font-family: 'Cormorant Garamond', serif;
     font-size: clamp(45px, 8vw, 85px);
@@ -331,17 +386,21 @@ body {
     margin-bottom: 20px;
 }
 
-.hero p,
-.welcome-section p {
+.hero h1 span {
+    color: var(--pink);
+}
+
+.hero-text {
     color: var(--pink);
     font-size: 16px;
     letter-spacing: 2px;
     line-height: 1.8;
+    margin-bottom: 30px;
 }
 
 
 /* =====================================
-   7. GALLERY SECTION
+   7. GALLERY
 ===================================== */
 
 .gallery-section {
@@ -352,34 +411,39 @@ body {
 .gallery-section h2,
 .letter-section h2,
 .video-section h2,
-.surprise-section h2 {
+.surprise-section h2,
+.gift-section h2,
+.cake-section h2 {
     color: var(--gold);
     font-family: 'Cormorant Garamond', serif;
     font-size: clamp(32px, 5vw, 48px);
     margin-bottom: 40px;
 }
 
-.gallery,
-.photo-gallery {
+.gallery {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 25px;
+
     max-width: 1000px;
     margin: auto;
 }
 
 .photo-card {
     overflow: hidden;
+
     border: 1px solid rgba(233, 168, 183, 0.3);
     border-radius: 18px;
+
     background: #1b111b;
+
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+
+    transition: 0.4s ease;
 }
 
 .photo-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 35px rgba(233, 168, 183, 0.15);
 }
 
 .photo-card img {
@@ -394,9 +458,16 @@ body {
     transform: scale(1.05);
 }
 
+.photo-card p {
+    padding: 18px;
+    color: var(--pink);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+}
+
 
 /* =====================================
-   8. LETTER SECTION
+   8. LETTER
 ===================================== */
 
 .letter-section {
@@ -404,28 +475,37 @@ body {
     text-align: center;
 }
 
-.letter-box,
-.letter-card {
+.letter-box {
     max-width: 750px;
     margin: auto;
     padding: 40px;
+
     border: 1px solid rgba(233, 201, 155, 0.3);
     border-radius: 20px;
+
     background: rgba(255, 255, 255, 0.04);
+
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
 }
 
-.letter-box p,
-.letter-card p {
+.letter-box p {
     color: #eadde4;
     font-family: 'Cormorant Garamond', serif;
     font-size: 21px;
     line-height: 1.9;
+    margin-bottom: 18px;
+}
+
+.letter-box h3 {
+    color: var(--gold);
+    margin-top: 20px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
 }
 
 
 /* =====================================
-   9. VIDEO SECTION
+   9. VIDEO
 ===================================== */
 
 .video-section {
@@ -434,23 +514,21 @@ body {
     text-align: center;
 }
 
-.video-section h2 {
-    margin-bottom: 30px;
-}
-
 .video-container {
     width: 100%;
     max-width: 850px;
     margin: auto;
     padding: 10px;
+
     border: 1px solid rgba(233, 201, 155, 0.4);
     border-radius: 20px;
+
     background: rgba(255, 255, 255, 0.04);
+
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
 }
 
-.video-container video,
-.birthday-video {
+.video-container video {
     display: block;
     width: 100%;
     max-height: 500px;
@@ -469,24 +547,446 @@ body {
 
 
 /* =====================================
-   10. SURPRISE SECTION
+   10. MYSTERY GIFT BOXES
 ===================================== */
 
-.surprise-section,
-.final-section {
+.gift-section {
+    padding: 100px 20px;
+    text-align: center;
+
+    background:
+        radial-gradient(circle at center, #281625, #100b12 75%);
+}
+
+.gift-description,
+.cake-description {
+    color: var(--pink);
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-bottom: 45px;
+}
+
+.gift-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 25px;
+
+    max-width: 850px;
+    margin: auto;
+}
+
+.gift-card {
+    min-height: 220px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 15px;
+
+    border: 1px solid rgba(233, 201, 155, 0.4);
+    border-radius: 20px;
+
+    background: linear-gradient(145deg, #38202f, #160f19);
+
+    color: var(--gold);
+
+    cursor: pointer;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+
+    transition: 0.4s ease;
+}
+
+.gift-card:hover {
+    transform: translateY(-12px) scale(1.03);
+
+    box-shadow: 0 15px 35px rgba(233, 168, 183, 0.2);
+}
+
+.gift-icon {
+    font-size: 65px;
+    transition: transform 0.4s ease;
+}
+
+.gift-card:hover .gift-icon {
+    transform: rotate(-12deg) scale(1.2);
+}
+
+.gift-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 25px;
+}
+
+.gift-hint {
+    color: var(--pink);
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+.gift-card.opened {
+    opacity: 0.65;
+    border-color: var(--pink);
+}
+
+.gift-message {
+    display: none;
+
+    max-width: 650px;
+    margin: 45px auto 0;
+    padding: 35px 25px;
+
+    border: 1px solid rgba(233, 168, 183, 0.4);
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    animation: fadeUp 0.7s ease;
+}
+
+.gift-message.show {
+    display: block;
+}
+
+.gift-message-icon {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.gift-message h3 {
+    color: var(--gold);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.gift-message p {
+    color: var(--pink);
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+
+/* =====================================
+   11. BIRTHDAY CAKE
+===================================== */
+
+.cake-section {
+    padding: 100px 20px;
+    text-align: center;
+
+    background:
+        radial-gradient(circle at center, #301b2a, #100b12 75%);
+}
+
+.cake-container {
+    width: 300px;
+    height: 280px;
+
+    position: relative;
+
+    margin: 70px auto 35px;
+}
+
+.cake-candles {
+    position: absolute;
+    top: 0;
+    left: 50%;
+
+    display: flex;
+    gap: 35px;
+
+    transform: translateX(-50%);
+
+    z-index: 5;
+}
+
+.candle {
+    position: relative;
+    width: 12px;
+    height: 55px;
+}
+
+.candle-stick {
+    width: 12px;
+    height: 55px;
+
+    border-radius: 5px;
+
+    background: repeating-linear-gradient(
+        45deg,
+        #e9a8b7,
+        #e9a8b7 5px,
+        #ffffff 5px,
+        #ffffff 10px
+    );
+}
+
+.flame {
+    position: absolute;
+    top: -24px;
+    left: -2px;
+
+    width: 16px;
+    height: 24px;
+
+    background: #ffcf67;
+
+    border-radius: 50% 50% 35% 35%;
+
+    box-shadow:
+        0 0 15px #ffb347,
+        0 0 30px #ff9e42;
+
+    animation: flameMove 0.7s infinite alternate;
+}
+
+@keyframes flameMove {
+    from {
+        transform: scale(1) rotate(-5deg);
+    }
+
+    to {
+        transform: scale(0.85) rotate(5deg);
+    }
+}
+
+.cake-top {
+    position: absolute;
+    width: 210px;
+    height: 55px;
+
+    top: 70px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    border-radius: 50%;
+
+    background: #f3b6c5;
+
+    z-index: 3;
+}
+
+.cake-middle {
+    position: absolute;
+
+    width: 210px;
+    height: 65px;
+
+    top: 92px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background: #b95f83;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 2;
+}
+
+.cake-middle span {
+    color: white;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+}
+
+.cake-bottom {
+    position: absolute;
+
+    width: 250px;
+    height: 75px;
+
+    top: 145px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background: #e9a8b7;
+
+    border-radius: 0 0 25px 25px;
+
+    z-index: 1;
+}
+
+.cake-plate {
+    position: absolute;
+
+    width: 290px;
+    height: 20px;
+
+    top: 215px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background: #e9c99b;
+
+    border-radius: 50%;
+}
+
+.cake-container.blown .flame {
+    display: none;
+}
+
+.cake-container.blown .candle-stick {
+    opacity: 0.8;
+}
+
+.cake-btn,
+.celebrate-btn {
+    padding: 15px 30px;
+
+    border: 1px solid var(--gold);
+    border-radius: 30px;
+
+    background: transparent;
+    color: var(--gold);
+
+    font-size: 14px;
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.cake-btn:hover,
+.celebrate-btn:hover {
+    background: var(--gold);
+    color: var(--dark);
+    transform: scale(1.05);
+}
+
+.cake-message {
+    display: none;
+
+    max-width: 650px;
+
+    margin: 40px auto 0;
+    padding: 30px;
+
+    border: 1px solid rgba(233, 168, 183, 0.4);
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.04);
+
+    animation: fadeUp 0.8s ease;
+}
+
+.cake-message.show {
+    display: block;
+}
+
+.cake-message h3 {
+    color: var(--gold);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.cake-message p {
+    color: var(--pink);
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+
+/* =====================================
+   12. FLOATING HEARTS
+===================================== */
+
+#celebrationLayer {
+    position: fixed;
+    inset: 0;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: 90000;
+}
+
+.floating-heart {
+    position: absolute;
+
+    bottom: -50px;
+
+    animation: heartFloat linear forwards;
+
+    opacity: 0.8;
+
+    filter: drop-shadow(0 0 8px rgba(233, 168, 183, 0.5));
+}
+
+@keyframes heartFloat {
+
+    0% {
+        transform: translateY(0) rotate(0deg) scale(0.7);
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 0.9;
+    }
+
+    85% {
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: translateY(-110vh) rotate(35deg) scale(1.3);
+        opacity: 0;
+    }
+
+}
+
+
+/* =====================================
+   13. FIREWORKS CANVAS
+===================================== */
+
+#fireworksCanvas {
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+
+    z-index: 90001;
+}
+
+
+/* =====================================
+   14. FINAL SURPRISE
+===================================== */
+
+.surprise-section {
     padding: 90px 20px;
     text-align: center;
 }
 
 .surprise-btn {
     display: inline-block;
+
     padding: 15px 35px;
+
     border: 1px solid var(--gold);
     border-radius: 30px;
+
     background: transparent;
     color: var(--gold);
+
     font-size: 14px;
     letter-spacing: 1px;
+
     cursor: pointer;
     transition: 0.3s ease;
 }
@@ -499,13 +999,19 @@ body {
 
 .surprise-message {
     display: none;
+
     max-width: 700px;
+
     margin: 35px auto 0;
     padding: 30px;
+
     border: 1px solid rgba(233, 168, 183, 0.3);
     border-radius: 18px;
+
     background: rgba(255, 255, 255, 0.04);
+
     color: var(--pink);
+
     font-family: 'Cormorant Garamond', serif;
     font-size: 24px;
     line-height: 1.8;
@@ -518,25 +1024,32 @@ body {
 
 
 /* =====================================
-   11. FOOTER
+   15. FOOTER
 ===================================== */
 
-footer,
-.footer {
+footer {
     padding: 30px 15px;
     text-align: center;
+
     color: var(--pink);
+
     border-top: 1px solid rgba(233, 168, 183, 0.15);
+
     font-size: 13px;
     letter-spacing: 1px;
 }
 
+footer p {
+    margin-top: 12px;
+}
+
 
 /* =====================================
-   12. ANIMATIONS
+   16. ANIMATIONS
 ===================================== */
 
 @keyframes fadeUp {
+
     from {
         opacity: 0;
         transform: translateY(30px);
@@ -546,11 +1059,12 @@ footer,
         opacity: 1;
         transform: translateY(0);
     }
+
 }
 
 
 /* =====================================
-   13. RESPONSIVE DESIGN
+   17. RESPONSIVE DESIGN
 ===================================== */
 
 @media (max-width: 768px) {
@@ -564,13 +1078,13 @@ footer,
     }
 
     .digital-box {
-        width: 105px;
-        min-height: 115px;
+        width: 95px;
+        min-height: 110px;
         padding: 15px 8px;
     }
 
     .digital-number {
-        font-size: 35px;
+        font-size: 32px;
     }
 
     .digital-label {
@@ -586,8 +1100,7 @@ footer,
         height: 220px;
     }
 
-    .gallery,
-    .photo-gallery {
+    .gallery {
         grid-template-columns: 1fr;
     }
 
@@ -595,18 +1108,25 @@ footer,
         height: 320px;
     }
 
-    .letter-box,
-    .letter-card {
+    .letter-box {
         padding: 25px 20px;
     }
 
-    .video-container video,
-    .birthday-video {
+    .video-container video {
         min-height: 220px;
         max-height: 400px;
     }
-}
 
+    .gift-container {
+        grid-template-columns: 1fr;
+        max-width: 350px;
+    }
+
+    .gift-card {
+        min-height: 180px;
+    }
+
+}
 
 @media (max-width: 480px) {
 
@@ -616,16 +1136,15 @@ footer,
 
     .countdown-card p {
         font-size: 11px;
-        letter-spacing: 2px;
     }
 
     .digital-box {
-        width: 90px;
-        min-height: 100px;
+        width: 75px;
+        min-height: 90px;
     }
 
     .digital-number {
-        font-size: 30px;
+        font-size: 27px;
     }
 
     .music-btn {
@@ -644,15 +1163,21 @@ footer,
         height: 270px;
     }
 
-    .video-container video,
-    .birthday-video {
+    .video-container video {
         min-height: 180px;
     }
+
+    .cake-container {
+        transform: scale(0.85);
+        margin-top: 40px;
+        margin-bottom: 15px;
+    }
+
 }
 
 
 /* =====================================
-   14. REDUCED MOTION
+   18. REDUCED MOTION
 ===================================== */
 
 @media (prefers-reduced-motion: reduce) {
@@ -664,4 +1189,5 @@ footer,
         animation-duration: 0.01ms !important;
         transition-duration: 0.01ms !important;
     }
+
 }
